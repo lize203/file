@@ -26,17 +26,6 @@ spring:
         max-wait: 1000ms
     timeout: 1000ms
 gov:
-  # 测试环境
-  userName: 430000
-  passWord: d72b9349d6b94eedab26dbb738cc9e2e
-  authUrl: http://111.205.202.84:8081/gateway/wlhy-auth/identification/obtain
-  dataUrl: http://111.205.202.84:8081/gateway/wlhy-exchange/exchange/send
-  # 正式环境
-  #  userName: 430000
-  #  passWord: a9e121b9ed06415e9f48e5c3e8f64c02
-  #  authUrl: http://wlhy.mot.gov.cn/gateway/wlhy-auth/identification/obtain
-  #  dataUrl: http://wlhy.mot.gov.cn/gateway/wlhy-exchange/exchange/send
-  publicKey: 04082AC459BF4EFA0747717A95FB1813756E5CD5D120ECFF8E2CDA8A48F38339B16930819E91BA6C27DEE9E6A99642AB57B06086B7F92F4C2CE2A512412597C632
   schedule:
 #    cron: 0 0 0 10 10 ?
 #    cron: 0 */5 * * * ?
