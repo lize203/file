@@ -1,0 +1,43 @@
+server:
+  port: 8886
+
+spring:
+  mvc:
+    static-path-pattern: /swlhy/**
+  web:
+    resources:
+      static-locations: file:d:/swlhy,classpath:/static/
+  task:
+    scheduling:
+      pool:
+        size: 10
+  redis:
+    cluster:
+      nodes: 192.168.1.211:7000,192.168.1.211:7001,192.168.1.211:7002,192.168.1.211:7003,192.168.1.211:7004,192.168.1.211:7005
+    password: "2v2kEVE1"
+    lettuce:
+      cluster:
+        refresh:
+          adaptive: true
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 1000ms
+    timeout: 1000ms
+gov:
+  # 测试环境
+  userName: 430000
+  passWord: d72b9349d6b94eedab26dbb738cc9e2e
+  authUrl: http://111.205.202.84:8081/gateway/wlhy-auth/identification/obtain
+  dataUrl: http://111.205.202.84:8081/gateway/wlhy-exchange/exchange/send
+  # 正式环境
+  #  userName: 430000
+  #  passWord: a9e121b9ed06415e9f48e5c3e8f64c02
+  #  authUrl: http://wlhy.mot.gov.cn/gateway/wlhy-auth/identification/obtain
+  #  dataUrl: http://wlhy.mot.gov.cn/gateway/wlhy-exchange/exchange/send
+  publicKey: 04082AC459BF4EFA0747717A95FB1813756E5CD5D120ECFF8E2CDA8A48F38339B16930819E91BA6C27DEE9E6A99642AB57B06086B7F92F4C2CE2A512412597C632
+  schedule:
+#    cron: 0 0 0 10 10 ?
+#    cron: 0 */5 * * * ?
+    cron: 0/10 * * * * ?
